@@ -1,0 +1,121 @@
+
+
+	    <a name="gettingstarted_capi" id="gettingstarted_capi"></a>
+            <h5 class="m-1 pt-3 pb-3">
+                <li>An example of tutor<em class="fas fa-info"></em>al with the WepSIM control API:</li>
+            </h5>
+
+            <div class="row m-1 pb-3">
+
+		  <div class="m-0 w-100">
+		    <div class="nav nav-pills nav-fill" id="v-pills-tab4" role="tablist" aria-orientation="horizontal">
+		      <a class="rounded border border-secondary nav-item nav-link active" data-toggle="pill"  role="tab" aria-selected="true"
+			 id="pill4-step1-tab" href="#pill4-step1" aria-controls="pill4-step1">
+		      <div class="rounded font-weight-bold mx-auto w-md-25">Add one iframe</div></a>
+		      <a class="rounded border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill4-step2-tab" href="#pill4-step2" aria-controls="pill4-step2">
+		      <div class="rounded font-weight-bold mx-auto w-md-25">Add links</div></a>
+		    </div>
+		  </div>
+
+		  <div class="m-0 border border-secondary w-100">
+		    <div class="tab-content" id="v-pills-tabContent">
+		      <div class="tab-pane show active" id="pill4-step1" 
+                           style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;"
+                           role="tabpanel" aria-labelledby="pill4-step1-tab">
+			   <h5 class="m-3">
+			   <span>
+				&lt;iframe<br>
+				&nbsp;&nbsp;&nbsp;title="Embedded WepSIM"<br>
+				&nbsp;&nbsp;&nbsp;aria-hidden="true"<br>
+				&nbsp;&nbsp;&nbsp;id="<strong>iframe1</strong>"<br>
+				&nbsp;&nbsp;&nbsp;src="https://acaldero.github.io/wepsim/ws_dist/wepsim-classic.html?notify=false&checkpoint=<strong>URL-of-Your-Checkpoint</strong>"&gt;&lt;/iframe&gt;
+			   </span>
+			   </h5>
+		      </div>
+		      <div class="tab-pane" id="pill4-step2" role="tabpanel" 
+                           style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;"
+                           aria-labelledby="pill4-step2-tab">
+			   <h5 class="m-3">
+			   <span>
+			&lt;a href="#"<br>
+			&nbsp;&nbsp;   class="btn btn-primary"<br>
+			&nbsp;&nbsp;   onclick="try {<br>
+			&nbsp;&nbsp;&nbsp;var context1 = document.getElementById('<strong>iframe1</strong>').contentWindow;<br>
+			&nbsp;&nbsp;&nbsp;context1.wsweb_recordbar_show();<br>
+			&nbsp;&nbsp;&nbsp;context1.wsweb_record_playInterval<strong>(0, 34)</strong>;<br>
+			&nbsp;&nbsp;&nbsp;} catch (e) {<br>
+			&nbsp;&nbsp;&nbsp;alert(e) ;<br>
+			&nbsp;&nbsp;&nbsp;}<br>
+		        &nbsp;&nbsp;&nbsp;return false;"&gt;<strong>Your-Example</strong>&lt;/a&gt;
+			   </span>
+			   </h5>
+		      </div>
+		    </div>
+		  </div>
+
+	    </div>
+
+	    <h5 class="mx-0 my-3">
+	    <strong>For example</strong>:
+	    </h5>
+
+            <div class="row m-1 pb-3 w-100">
+
+		    <!-- JavaScript based on: https://stackoverflow.com/questions/1600488/calling-javascript-function-in-iframe -->
+		    <nav class="nav nav-pills nav-justified nav-fill col-12">
+			  <a href="#"
+			     class="nav-item nav-link mx-2 border border-secondary"
+			     onclick="try {
+					      var context1 = document.getElementById('iframe1').contentWindow;
+					      context1.wsweb_execution_reset();
+					      context1.wsweb_record_off();
+					      context1.wsweb_recordbar_close();
+					  } catch (e) {
+					     alert(e) ;
+					  }
+				      return false;">(Reset)</a>
+
+			  <a href="#"
+			     class="nav-item nav-link mx-2 border border-secondary"
+			     onclick="try {
+					      var context1 = document.getElementById('iframe1').contentWindow;
+					      context1.wsweb_recordbar_show();
+					      context1.wsweb_record_playInterval(0, 34);
+					  } catch (e) {
+						 alert(e) ;
+					  }
+				       return false;"><em class="fas fa-info"></em>&nbsp; How to execute an example<br> (steps 1 to 34)</a>
+
+			  <a href="#"
+			     class="nav-item nav-link mx-2 border border-secondary"
+			     onclick="try {
+					      var context1 = document.getElementById('iframe1').contentWindow;
+					      context1.wsweb_recordbar_show();
+					      context1.wsweb_record_playInterval(35, 72);
+					  } catch (e) {
+						 alert(e) ;
+					  }
+				       return false;"><em class="fas fa-info"></em>&nbsp;How to use the execution speed<br> (steps 35 to 72)</a>
+		    </nav>
+
+		    <div class="col-12 py-2 px-0">
+				<div id="idiv1" style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;">
+
+				<iframe class="w-100 border border-secondary embed-responsive-item"
+					style="overflow: auto!important; -webkit-overflow-scrolling: touch!important; height:100vh; position:relative"
+					title="Embedded WepSIM"
+					aria-hidden="true"
+					id="iframe1" 
+					src="https://acaldero.github.io/wepsim/ws_dist/wepsim-classic.html?notify=false&checkpoint=https://acaldero.github.io/wepsim/examples/checkpoint/tutorial_2.txt"></iframe>
+				</div>
+		    </div>
+
+            </div>
+
+
+	</ul>
+
+        </div>
+    </section>
+
